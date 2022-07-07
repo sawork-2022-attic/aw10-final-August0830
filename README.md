@@ -42,3 +42,14 @@
 
 采用消息驱动机制，如pos-order和pos-delivery之间采用publish-subscribe架构，在负载平衡的同时保持了低耦合度。
 
+
+
+### 小规模测试样例
+
+```bash
+curl -H "Content-Type:text/plain" -X POST -d 'p1|p2|addr:CityA' http://localhost:2222/order 
+#for pos-order
+curl -H "Content-type:application/json" -X POST -d '{"orderId":"001","deliveryId":"001","delivered":"false"}' http://localhost:2222/delivery/add
+#for pos-delivery
+```
+
