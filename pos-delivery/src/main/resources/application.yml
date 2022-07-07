@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: pos-delivery
+  # rabbitmq:
+  #   host: localhost
+  #   port: 15672
+  #   username: guest
+  #   password: guest
+  # cloud:
+  #   function:
+  #     definition: the name of bean of consumer
+  #   stream:
+  #     bindings:
+  #       order-in:
+  #         binder: rabbit
+  #         destination: orderExchange
+  #         group: default
+server:
+  port: 8086
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
